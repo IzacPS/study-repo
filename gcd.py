@@ -4,12 +4,10 @@ def gcd(a, b):
 	if a < b:
 		a, b = b, a
 	
-	while True:	
-		r = a % b
-		if r == 0:
-			return b
+	while b != 0:	
 		a = b
-		b = r
+		b = a % b
 
+	return a
 
 print(gcd(10, 5))
